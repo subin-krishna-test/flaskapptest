@@ -35,35 +35,6 @@ jobs:
             scp -o StrictHostKeyChecking=no app.py ubuntu@3.137.154.9
             ssh -o StrictHostKeyChecking=no ubuntu@3.137.154.9 sudo nohup python3 app.py > log.txt 2>&1 &
             
-            
-    # docker:
-    #   - image: cimg/python:3.10.0
-    # steps:
-    #   - checkout
-    #   - run:
-    #       name: AWS EC2 deploy
-    #       command: |
-    #         ssh -o StrictHostKeyChecking=no ubuntu@3.137.171.250 -v -yes
-            
-            
-            #ssh ubuntu@3.137.171.250 -v -yes
-            # echo Start
-
-            #ssh -o StrictHostKeyChecking=no ubuntu@3.137.171.250 
-            #echo Start
-            # scp -o StrictHostKeyChecking=no app.py 
-            # "echo Start deploy && \
-            # scp app.py ubuntu@3.137.171.250 && \
-            # sudo nohup python app.py > log.txt 2>&1 &&
-            # echo Deploy end"
-            
-
-            #scp app.py ubuntu@3.137.171.250:
-            # scp -o StrictHostKeyChecking=no app.py ubuntu@3.137.171.250
-            # ssh -o StrictHostKeyChecking=no ubuntu@3.141.7.109 "sudo nohup python app.py > log.txt 2>&1 &"
-            #ssh  Test_1_key ubuntu@ip -v -yes
-
-
 workflows:
   build-work:
     jobs:
