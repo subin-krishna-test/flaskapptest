@@ -32,7 +32,7 @@ jobs:
           command: |
             #! /bin/bash
             echo Start deploy 
-            ssh -o StrictHostKeyChecking=no ubuntu@3.137.154.9 pwd git clone https://github.com/subin-krishna-test/flaskapptest.git ls
+            ssh -o StrictHostKeyChecking=no ubuntu@3.137.154.9 pwd git clone https://github.com/subin-krishna-test/flaskapptest.git pwd ls
             
             
     # docker:
