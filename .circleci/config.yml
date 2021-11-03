@@ -31,7 +31,7 @@ jobs:
           name: Connect to ec2 instance
           command: |
             echo Start deploy 
-            ssh -o StrictHostKeyChecking=no ubuntu@3.137.154.9  git clone https://github.com/subin-krishna-test/flaskapptest.git  flask  cd flask python3 app.py
+            ssh -o StrictHostKeyChecking=no ubuntu@3.137.154.9  git clone https://github.com/subin-krishna-test/flaskapptest.git flask  python3 flask/app.py
             
             
     # docker:
