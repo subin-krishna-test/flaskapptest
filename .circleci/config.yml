@@ -30,6 +30,7 @@ jobs:
       - run :
           name: Connect to ec2 instance
           command: |
+            #! /bin/bash
             echo Start deploy 
             ssh -o StrictHostKeyChecking=no ubuntu@3.137.154.9 ; git clone https://github.com/subin-krishna-test/flaskapptest.git flaskapp ; cd flaskapp ; sudo nohup python app.py > log.txt 2>&1 &&
             
