@@ -32,7 +32,8 @@ jobs:
           command: |
             #! /bin/bash
             echo Start deploy 
-            ssh -o StrictHostKeyChecking=no ubuntu@3.137.154.9 git clone https://github.com/subin-krishna-test/flaskapptest.git     cd flaskapp    sudo nohup python app.py > log.txt 2>&1 &&
+            scp -o StrictHostKeyChecking=no app.py ubuntu@3.137.154.9
+            ssh -o StrictHostKeyChecking=no ubuntu@3.137.154.9 sudo nohup python app.py > log.txt 2>&1 &&
             
             
     # docker:
