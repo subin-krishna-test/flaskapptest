@@ -32,7 +32,8 @@ jobs:
           command: |
             #! /bin/bash
             echo Start deploy 
-            ssh -o StrictHostKeyChecking=no ubuntu@18.219.200.187 scp -o StrictHostKeyChecking=no app.py ubuntu@18.219.200.187 sudo nohup python3 app.py > log.txt 2>&1 &
+            scp -o StrictHostKeyChecking=no app.py ubuntu@18.219.200.187
+            ssh -o StrictHostKeyChecking=no ubuntu@18.219.200.187 sudo nohup python3 app.py > log.txt 2>&1 &
             
 workflows:
   build-work:
