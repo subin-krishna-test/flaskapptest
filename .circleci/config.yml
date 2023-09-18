@@ -32,7 +32,7 @@ jobs:
           command: |
             #! /bin/bash
             echo Start deploy
-            ssh -o StrictHostKeyChecking=no ubuntu@13.58.112.245 https://github.com/subin-krishna-test/flaskapptest.git app sudo nohup python3 app/app.py > log.txt 2>&1 &
+            ssh -o StrictHostKeyChecking=no $user@$IP https://github.com/subin-krishna-test/flaskapptest.git app sudo nohup python3 app/app.py > log.txt 2>&1 &
               
             
 workflows:
